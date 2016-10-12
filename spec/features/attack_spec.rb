@@ -6,6 +6,6 @@ RSpec.feature Battle, :type => :feature do
     sign_in_and_play
     click_button "Attack Player 2"
 
-    expect(page).to have_text("You attacked player 2!")
+    expect(page).to have_text("You attacked Dio!")
   end
 end
