@@ -2,6 +2,8 @@ require 'sinatra/base'
 
 class Battle < Sinatra::Base
 
+  enable :sessions
+
   get '/' do
     erb :index
   end
@@ -14,4 +16,14 @@ class Battle < Sinatra::Base
 
 
   run! if app_file == $0
+end
+
+
+
+get '/' do
+  "value = " << session[:value].inspect
+end
+
+get '/:value' do
+  session['value'] = params['value']
 end
