@@ -5,7 +5,8 @@ RSpec.feature Battle, :type => :feature do
     visit "/"
 
     fill_in "name", with: "Rory"
+    click_button "Enter"
 
-
+    expect(page).to have_text("Welcome to Battle Rory")
   end
 end
