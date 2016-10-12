@@ -9,8 +9,8 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    p session[:player1] = params[:player1]
-    p session[:player2] = params[:player2]
+    session[:player1] = params[:player1]
+    session[:player2] = params[:player2]
     redirect '/play'
   end
 
@@ -18,6 +18,10 @@ class Battle < Sinatra::Base
     @name1 = session[:player1]
     @name2 = session[:player2]
     erb :play
+  end
+
+  get '/attack' do
+    erb :attack_confirm
   end
 
   run! if app_file == $0
