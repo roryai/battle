@@ -10,7 +10,7 @@ describe Game do
 
     it 'expects turn status to switch upon attack' do
       game.attack(game.player_2)
-      expect(game.name(game.current_player)).to eq game.name(game.player_2)
+      expect(game.name(game.arr[0])).to eq game.name(game.player_2)
     end
 
   end
