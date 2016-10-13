@@ -22,9 +22,7 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    $game.turn_switcher
-    $game.attack($game.current_player)
-
+   $game.attack($game.arr.last)
     erb :attack_confirm
   end
 

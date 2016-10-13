@@ -5,7 +5,7 @@
 <h4> <%= $game.name($game.player_2) %> HP: <%= $game.hitpoints($game.player_2) %> </h4>
 
 <!-- Displays whose turn it is -->
-<h3> Turn: <%=$game.current_player.name %> </h3>
+<h3> Turn: <%=$game.arr[0].name %> </h3>
 
 
 <form action="/attack" method="get">
