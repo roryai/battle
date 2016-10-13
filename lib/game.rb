@@ -12,7 +12,7 @@ class Game
 
   def attack(player)
     player.damage
-    turn_switcher
+
   end
 
   def name(player)
