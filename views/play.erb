@@ -4,7 +4,9 @@
 <h4> <%= $game.name($game.player_1) %> HP: <%= $game.hitpoints($game.player_1) %> </h4>
 <h4> <%= $game.name($game.player_2) %> HP: <%= $game.hitpoints($game.player_2) %> </h4>
 
-<form action="/attack" method="get">
+<!-- Displays whose turn it is -->
 
-  <input type="submit" value="Attack Player 2">
+
+<form action="/attack" method="get">
+  <input type="submit" value="Attack!">
 </form>

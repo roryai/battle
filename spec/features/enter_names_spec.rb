@@ -6,6 +6,6 @@ RSpec.feature Battle, :type => :feature do
     sign_in_and_play
 
     expect(page).to have_text("Welcome to Battle")
-    expect(page).to have_text("Rory vs Dio")
+    expect(page).to have_text("Elizabeth vs Dio")
   end
 end

@@ -6,7 +6,7 @@ RSpec.feature Battle, :type => :feature do
   scenario "confirms when player is attacked" do
 
     sign_in_and_play
-    click_button "Attack Player 2"
+    click_button "Attack!"
 
     expect(page).to have_text("You attacked Dio!")
 
@@ -15,7 +15,7 @@ RSpec.feature Battle, :type => :feature do
   scenario "attack reduces opponent HP by 10" do
 
     sign_in_and_play
-    click_button "Attack Player 2"
+    click_button "Attack!"
 
     expect(page).to have_text("Dio HP reduced by 10!")
 
