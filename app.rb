@@ -16,10 +16,13 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+  p  $player_1
+  p  $player_2
     erb :play
   end
 
   get '/attack' do
+    $player_1.attack($player_2)
     erb :attack_confirm
   end
 

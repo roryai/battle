@@ -1,9 +1,10 @@
 <h1> Welcome to Battle </h1>
 <h3> <%= $player_1.name %> vs <%= $player_2.name %> </h3>
 
-<h4> <%= $player_1.name %> HP: 100 </h4>
-<h4> <%= $player_2.name %> HP: 100 </h4>
+<h4> <%= $player_1.name %> <%= $player_1.hp %> </h4>
+<h4> <%= $player_2.name %> <%= $player_2.hp %> </h4>
 
 <form action="/attack" method="get">
+  
   <input type="submit" value="Attack Player 2">
 </form>

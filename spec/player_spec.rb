@@ -1,7 +1,7 @@
 require 'player'
 
 describe Player do
-  subject(:player) {described_class.new("Elizabeth")}
+  subject(:player) {described_class.new("Rory")}
 
   describe '#initialize' do
     it 'stores name as an attribute'do
@@ -11,7 +11,7 @@ describe Player do
 
     describe '#hit_points' do
       it 'reduces player 2 HP by 10' do
-        player_2 = Player.new("Rory")
+        player_2 = Player.new("Dio")
         expect {player.attack(player_2)}.to change{player_2.hp}.by(-10)
       end
     end
