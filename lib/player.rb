@@ -1,3 +1,5 @@
+
+
 class Player
 
   attr_reader :name, :hp
@@ -9,10 +11,6 @@ class Player
 
   def damage
     @hp -= 10
-  end
-
-  def attack(opponent)
-    opponent.damage
   end
 
 end

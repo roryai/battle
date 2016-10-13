@@ -1,0 +1,24 @@
+# require 'player'
+
+class Game
+
+  attr_reader :player_1, :player_2
+
+  def initialize(player_1, player_2)
+    @player_1 = player_1
+    @player_2 = player_2
+  end
+
+  def attack(player)
+    player.damage
+  end
+
+  def name(player)
+    player.name
+  end
+
+  def hitpoints(player)
+    player.hp
+  end
+
+end
