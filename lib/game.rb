@@ -13,7 +13,10 @@ class Game
   def attack(player)
     player.damage
     turn_switcher
+  end
 
+  def turn_switcher
+      @arr.rotate!
   end
 
   def name(player)
@@ -22,10 +25,6 @@ class Game
 
   def hitpoints(player)
     player.hp
-  end
-
-  def turn_switcher
-      @arr.rotate!
   end
 
 end
