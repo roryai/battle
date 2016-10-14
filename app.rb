@@ -23,7 +23,7 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     $game.attack($game.arr.last)
-    p redirect '/winner' if $game.arr.first.hp == 0
+    redirect '/winner' if $game.arr.first.hp == 0
     erb :attack_confirm
   end
 
