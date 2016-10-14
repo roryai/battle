@@ -4,7 +4,11 @@ require_relative 'lib/game'
 
 class Battle < Sinatra::Base
 
-  enable :sessions
+  # this doesn't run the code block, it just sets the variable before each page is loaded?
+  # it prevents you from having to declare "@game = Game.instance" at the start of each route
+  before do
+    @game = Game.instance
+  end
 
   get '/' do
     erb :index
@@ -18,14 +22,12 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @game = Game.instance
     erb :play
   end
 
   get '/attack' do
-    @game = Game.instance
-    $game.attack($game.arr.last)
-    redirect '/winner' if $game.arr.first.hp == 0
+    @game.attack(@game.arr.last)
+    redirect '/winner' if @game.arr.first.hp == 0
     erb :attack_confirm
   end
 
